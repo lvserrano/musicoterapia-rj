@@ -48,9 +48,9 @@
   <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
@@ -93,21 +93,37 @@
 </head>
 
 <body>
+  <!-- Loading Screen -->
+  <div class="loading-overlay" id="loading">
+    <div class="loading-spinner"></div>
+  </div>
+
   <header class="header">
     <nav class="nav">
       <div class="logo">
         <i class="fas fa-brain"></i>
         <span>Clínica Psico & Terapias</span>
       </div>
+      <ul class="nav-menu">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#profissional">Profissional</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="inicio">
       <div class="hero-content">
         <div class="hero-text">
           <h1>Musicoterapia</h1>
           <p class="subtitle">Já se perguntou se a musicoterapia seria indicada para o seu filho ou até mesmo para você?</p>
+          <a href="#contato" class="cta-button">
+            <i class="fas fa-calendar-alt"></i>
+            Agendar Consulta
+          </a>
           <div class="musical-notes">
             <i class="fas fa-music note-1"></i>
             <i class="fas fa-music note-2"></i>
@@ -125,12 +141,77 @@
       </div>
     </section>
 
-    <section class="about">
+    <section class="professional" id="profissional">
+      <div class="container">
+        <div class="professional-content">
+          <div class="professional-photo">
+            <div class="photo-container">
+              <img src="images/profissional.png" alt="Musicoterapeuta">
+            </div>
+            <div class="certifications">
+              <div class="cert-badge">CRT 12345</div>
+              <div class="cert-badge">Especialista TEA</div>
+              <div class="cert-badge">10+ Anos</div>
+            </div>
+          </div>
+          <div class="professional-info">
+            <h2>Conheça Nossa Musicoterapeuta</h2>
+            <h3>Especialista em Terapias Integradas</h3>
+            <p>Com mais de 10 anos de experiência em musicoterapia, nossa profissional é especializada no atendimento de crianças, adolescentes, adultos e idosos, com foco especial em TEA, TDAH e transtornos de aprendizagem.</p>
+            <p>Formada em Musicoterapia e com especializações em neuropsicologia, oferece um atendimento personalizado e humanizado, utilizando as mais modernas técnicas terapêuticas.</p>
+            <!-- <div class="experience-stats">
+              <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <div class="stat-label">Pacientes Atendidos</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">10+</span>
+                <div class="stat-label">Anos de Experiência</div>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">95%</span>
+                <div class="stat-label">Taxa de Satisfação</div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="sobre">
       <div class="container">
         <div class="about-content">
           <div class="about-text">
             <h2>O que é Musicoterapia?</h2>
             <p>A musicoterapia é uma <strong>intervenção clínica e terapêutica</strong>, realizada por um musicoterapeuta formado, com foco no desenvolvimento emocional, social, cognitivo ou comportamental.</p>
+            <p>Utilizamos a música como ferramenta principal para promover bem-estar, desenvolver habilidades e trabalhar questões específicas de cada paciente.</p>
+
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <i class="fas fa-heart"></i>
+                <span>Desenvolvimento Emocional</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-users"></i>
+                <span>Habilidades Sociais</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-brain"></i>
+                <span>Estímulo Cognitivo</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-running"></i>
+                <span>Coordenação Motora</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-comments"></i>
+                <span>Comunicação</span>
+              </div>
+              <div class="benefit-item">
+                <i class="fas fa-smile"></i>
+                <span>Autoestima</span>
+              </div>
+            </div>
           </div>
           <div class="instruments-grid">
             <div class="instrument">
@@ -150,54 +231,61 @@
       </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="servicos">
       <div class="container">
         <h2>Atendimento Especializado</h2>
+        <p class="services-subtitle">Oferecemos tratamento personalizado para diferentes faixas etárias e condições específicas</p>
         <div class="services-grid">
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-child"></i>
             <h3>Crianças</h3>
+            <p>Desenvolvimento de habilidades sociais, emocionais e cognitivas através da música</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-user-graduate"></i>
             <h3>Adolescentes</h3>
+            <p>Apoio no desenvolvimento da identidade e expressão emocional</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-user"></i>
             <h3>Adultos</h3>
+            <p>Trabalho terapêutico para ansiedade, depressão e desenvolvimento pessoal</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-user-friends"></i>
             <h3>Idosos</h3>
+            <p>Estímulo cognitivo e melhoria da qualidade de vida através da música</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-running"></i>
             <h3>Transtornos Motores</h3>
+            <p>Reabilitação e desenvolvimento da coordenação motora</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-puzzle-piece"></i>
             <h3>TEA</h3>
-            <p>Transtorno do Espectro Autista</p>
+            <p>Transtorno do Espectro Autista - Desenvolvimento de habilidades sociais e comunicativas</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-book"></i>
             <h3>Transtornos de Aprendizagem</h3>
+            <p>Apoio no desenvolvimento de habilidades acadêmicas e cognitivas</p>
           </div>
-          <div class="service-card">
+          <div class="service-card fade-in">
             <i class="fas fa-bolt"></i>
             <h3>TDAH</h3>
-            <p>Transtorno do Déficit de Atenção com Hiperatividade</p>
+            <p>Transtorno do Déficit de Atenção com Hiperatividade - Melhoria da concentração e foco</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="contato">
       <div class="container">
         <div class="contact-content">
           <div class="contact-info">
             <h2>Entre em Contato</h2>
-            <p>Trabalhamos em parceria com escolas e oferecemos valores acessíveis.</p>
+            <p>Trabalhamos em parceria com escolas e oferecemos valores acessíveis para proporcionar o melhor atendimento personalizado.</p>
 
             <div class="info-item">
               <i class="fab fa-whatsapp"></i>
@@ -210,6 +298,10 @@
             <div class="info-item">
               <i class="fas fa-map-marker-alt"></i>
               <span>Estr. do Campinho nº 274, Campo Grande</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-clock"></i>
+              <span>Segunda à Sexta: 8h às 18h</span>
             </div>
             <div class="info-item">
               <i class="fab fa-instagram"></i>
@@ -272,7 +364,7 @@
       <div class="container">
         <div class="partnership-content">
           <h3>Parceria com Escolas</h3>
-          <p>Trabalhamos em parceria com escolas, oferecendo valores acessíveis para proporcionar o melhor atendimento.</p>
+          <p>Trabalhamos em parceria com escolas, oferecendo valores acessíveis para proporcionar o melhor atendimento e contribuir para o desenvolvimento integral dos alunos.</p>
           <div class="kids-icons">
             <i class="fas fa-child"></i>
             <i class="fas fa-music"></i>
@@ -295,6 +387,10 @@
     </div>
   </footer>
 
+  <!-- Scroll to Top Button -->
+  <button class="scroll-top" id="scrollTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <script src="js/script.js"></script>
   <script src="js/cookie-modal.js"></script>
 </body>
